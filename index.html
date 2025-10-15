@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Profesional</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator-header">
+            <h1>✨ Calculadora Pro</h1>
+        </div>
+        
+        <div class="display">
+            <div class="display-operation" id="operation"></div>
+            <div class="display-result" id="result">0</div>
+        </div>
+
+        <div class="buttons">
+            <button class="btn-clear" onclick="clearDisplay()">C</button>
+            <button class="btn-delete" onclick="deleteChar()">⌫</button>
+            <button class="btn-operator" onclick="appendOperator('/')">/</button>
+            <button class="btn-operator" onclick="appendOperator('*')">×</button>
+
+            <button class="btn-number" onclick="appendNumber('7')">7</button>
+            <button class="btn-number" onclick="appendNumber('8')">8</button>
+            <button class="btn-number" onclick="appendNumber('9')">9</button>
+            <button class="btn-operator" onclick="appendOperator('-')">-</button>
+
+            <button class="btn-number" onclick="appendNumber('4')">4</button>
+            <button class="btn-number" onclick="appendNumber('5')">5</button>
+            <button class="btn-number" onclick="appendNumber('6')">6</button>
+            <button class="btn-operator" onclick="appendOperator('+')">+</button>
+
+            <button class="btn-number" onclick="appendNumber('1')">1</button>
+            <button class="btn-number" onclick="appendNumber('2')">2</button>
+            <button class="btn-number" onclick="appendNumber('3')">3</button>
+            <button class="btn-function" onclick="appendDecimal()">.</button>
+
+            <button class="btn-number" onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+            <button class="btn-equals" onclick="calculate()">=</button>
+        </div>
+
+        <div class="footer">
+            Respeta jerarquía de operaciones
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
